@@ -7,13 +7,53 @@
     <title>Todo - Cinthia</title>
 
 <!--CSS External -->
-    <link rel="stylesheet" href ="styles.css">
+    <link rel="stylesheet" href ="css/style.css">
+
+    <!-- Tsilwind CSS CDN -->
+     <script src ="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-
 <body>
+
+    <!-- Header  -->
+    <header>
+        <h1 class="text-3xl font bold">Cinthia's Todo App</h1>
+    </header>
+
+<!-- Main Content -->
+<main>
+    <!-- Form Todo -->
+     <section>
+        <form id ="todo-form">
+            <input type ="text" class="border rounded p-[8px]" id="todo-input" placeholder ="Enter a new todo..." required>
+            <input type ="date" class="border rounded p-[8px]" id ="todo-date" required>
+            <button type ="button" onclick="addTodo()" class="bg-red-500 rounded text-white p-[8px]">Add Todo</button>
+        </form>
+     </section>
+
+<!--Action  Buttons -->
+<section class="mt-[16px] flex gap-2">
+    <button class ="bg-yellow-400 rounded text-black p-[8px]"onclick="deleteAllTool()">DELETE ALL</button>
+    <button class ="bg-green-500 rounded text-black p-[8px]">Filter</button>
+</section>
+
+     <!-- List Todo -->
+      <section class="mt-[16px]">
+        <ul id ="todo-list" class ="mt-4">
+            <!-- Todo items will be appended here -->
+             <p class ="text-center text-gray-500">No todos yet.Add one above!</p>
+        </ul>
+      </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <P>&copy; 2025 Cinthia's Todo App</p>
+</footer>
+
+
 <!-- JavaScript -->
-   <script src ="script.js"></script>
+   <script src ="js/script.js"></script>
 </body>
 
 </html>
